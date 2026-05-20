@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Komuravelli Tharuni</title>
+    <meta name="description" content="Contact Komuravelli Tharuni through an accessible form for web development, AI projects, and portfolio inquiries.">
+    <meta name="keywords" content="contact, portfolio, email, web developer, AI, accessible form">
+    <meta name="author" content="Komuravelli Tharuni">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://example.com/contact.html">
+    <meta property="og:title" content="Contact | Komuravelli Tharuni">
+    <meta property="og:description" content="Get in touch with Komuravelli Tharuni for collaborations, web development, and AI projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/contact.html">
+    <meta name="theme-color" content="#0b1120">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#maincontent">Skip to main content</a>
+
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Home"></a>
+            <nav aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="maincontent" class="site-main">
+        <section class="page-hero" aria-labelledby="contact-heading">
+            <div class="container">
+                <h1 id="contact-heading">Let’s connect</h1>
+                <p>Reach out for portfolio reviews, development projects, or AI collaborations.</p>
+            </div>
+        </section>
+
+        <section class="content-block" aria-labelledby="form-heading">
+            <div class="container contact-grid">
+                <div>
+                    <h2 id="form-heading">Send a message</h2>
+                    <p>Please use the form below to share your project details or request a resume preview.</p>
+                </div>
+                <form class="contact-form" action="#" method="post" novalidate aria-describedby="form-note form-status" id="contactForm">
+                    <p id="form-note" class="sr-only">All fields are required unless otherwise noted.</p>
+                    <div id="form-status" class="form-status" aria-live="polite"></div>
+                    <fieldset>
+                        <legend>Contact information</legend>
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" required placeholder="Your name">
+
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+                        <label for="subject">Subject</label>
+                        <input id="subject" name="subject" type="text" required placeholder="Project inquiry">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Message</legend>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project"></textarea>
+                    </fieldset>
+
+                    <button class="button primary" type="submit">Send message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="content-block" aria-labelledby="details-heading">
+            <div class="container">
+                <h2 id="details-heading">Contact details</h2>
+                <address>
+                    <p>Email: <a href="mailto:tharuni@example.com">tharuni@example.com</a></p>
+                    <p>Location: Hyderabad, India</p>
+                </address>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <p>© 2026 Komuravelli Tharuni. Ready to connect on accessible web and AI projects.</p>
+            <a href="index.html">Back to home</a>
+        </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
