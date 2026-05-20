@@ -1,5 +1,31 @@
 ﻿const contactForm = document.getElementById('contactForm');
 const statusMessage = document.getElementById('form-status');
+const themeToggle = document.querySelector('.theme-toggle');
+
+function setTheme(theme) {
+  document.body.setAttribute('data-theme', theme);
+  localStorage.setItem('site-theme', theme);
+  if (themeToggle) {
+    themeToggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+    themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+}
+
+function initTheme() {
+  const savedTheme = localStorage.getItem('site-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  setTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.body.getAttribute('data-theme');
+    setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+  });
+}
+
+initTheme();
 
 if (contactForm && statusMessage) {
   contactForm.addEventListener('submit', function (event) {
